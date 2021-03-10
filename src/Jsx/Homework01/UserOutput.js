@@ -4,53 +4,78 @@ funcional component
 */
 
 import React, { useState } from 'react';
+import UserInput from './UserInput';
 import './Homework.css';
 
-const UserOutput = props => {
+const userOutput = props => {
 
     const [studentsState, setStudentsSate] = useState({
         students: [
-            {name: 'Huey Dumbar'},
-            {name: 'Luis Enrique'},
-            {name: 'Marc Anthony'},
-            {name: 'Porfi Baloa'},
+            {studentName: 'Huey Dumbar'},
+            {studentName: 'Luis Enrique'},
+            {studentName: 'Marc Anthony'},
+            {studentName: 'Porfi Baloa'},
         ]
     });
 
     const updateNamesHandler = () => {
         setStudentsSate({
             students: [
-                {name: 'Luis Miguel'},
-                {name: 'Julio Iglesias'},
-                {name: 'Jose Jose'},
-                {name: 'El Puma'},
+                {studentName: 'Luis Miguel'},
+                {studentName: 'Julio Iglesias'},
+                {studentName: 'Jose Jose'},
+                {studentName: 'El Puma'},
             ]            
         });
     }
 
+    //two way binding function
+    const updateSingleNameHandler = (event) => {
+        setStudentsSate({
+            students: [
+                {studentName: event.target.value},
+                {studentName: event.target.value},
+                {studentName: event.target.value},
+                {studentName: event.target.value},                                
+            ]
+        })
+    }
 
     return(
         <div className="paragraph">
+            <button onClick={updateNamesHandler}>Update Names</button>
             <p className="title">
                 CS Bachelor Degree by Null Academy
             </p>
             <p className="content">
-                Hereby, the student <span>{studentsState.students[0]}</span> is acredited as
+                Hereby, the student: <UserInput 
+                name={studentsState.students[0].studentName}
+                updateName={updateSingleNameHandler}
+                 /> is acredited as
                 Bachelor degree in Computing Science by HT
                 Academy.
             </p>            
             <p className="content">
-                Hereby, the student <span>{studentsState.students[1]}</span> is acredited as
+                Hereby, the student <UserInput 
+                name={studentsState.students[1].studentName}
+                updateName={updateSingleNameHandler}                
+                /> is acredited as
                 Bachelor degree in Computing Science by HT
                 Academy.
             </p>                        
             <p className="content">
-                Hereby, the student <span>{studentsState.students[2]}</span> is acredited as
+                Hereby, the student <UserInput 
+                name={studentsState.students[2].studentName} 
+                updateName={updateSingleNameHandler}
+                /> is acredited as
                 Bachelor degree in Computing Science by HT
                 Academy.
             </p>                                    
             <p className="content">
-                Hereby, the student <span>{studentsState.students[3]}</span> is acredited as
+                Hereby, the student <UserInput 
+                name={studentsState.students[3].studentName} 
+                updateName={updateSingleNameHandler}
+                /> is acredited as
                 Bachelor degree in Computing Science by HT
                 Academy.
             </p>                                    
@@ -59,4 +84,4 @@ const UserOutput = props => {
 
 }
 
-export default UserOutput;
+export default userOutput;

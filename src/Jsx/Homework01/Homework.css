@@ -22,5 +22,7 @@
 /*classes for UserInput.js*/
 .form{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
 }
