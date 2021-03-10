@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import UserInput from './UserInput';
 import './Homework.css';
 
-const userOutput = props => {
+const UserOutput = props => {
 
     const [studentsState, setStudentsSate] = useState({
         students: [
@@ -84,4 +84,4 @@ const userOutput = props => {
 
 }
 
-export default userOutput;
+export default UserOutput;

@@ -1,7 +1,8 @@
 import Menu from './Paginas/Menu';
 import Submenu from './Paginas/Submenu';
 import Cliente from './Jsx/Cliente';
-import Homework01 from './Jsx/Homework01'
+import Homework01 from './Jsx/Homework01';
+import Lists from './Lists';
 import './App.css';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         </div>
         <div>
           {/*<Cliente />*/}
-          <Homework01 />
+          {/*<Homework01 /> */}
+          <Lists />
         </div>
         <p>@hftamayo</p>
       </main>
