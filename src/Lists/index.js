@@ -3,12 +3,12 @@
 //display UserOutput and UserInput
 
 import React from 'react';
-import VerClientes1c from './VerClientes1c';
+import VerClientes1d from './VerClientes1d';
 
 function homework01(){
     return(
         <div>
-            <VerClientes1c />
+            <VerClientes1d />
         </div>
 
     )
