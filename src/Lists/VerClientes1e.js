@@ -3,7 +3,7 @@ import Nuevocliente5b from './NuevoCliente5b';
 import '../App.css';
 //uso de list y states
 
-class verclientes1d extends Component{
+class verclientes1e extends Component{
     
     state = {
         persons: [
@@ -76,4 +76,4 @@ class verclientes1d extends Component{
     }
 }
 
-export default verclientes1d;
+export default verclientes1e;
