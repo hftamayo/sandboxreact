@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nuevocliente5b from './NuevoCliente5b';
 import '../App.css';
 //uso de list y states
+//removing elements from a list
 
 class verclientes1e extends Component{
     
@@ -26,9 +27,10 @@ class verclientes1e extends Component{
         })
     }
 
+    //funcion para borrar elementos de la lista
     deletePersonHandler = (personIndex) => {
         const persons = this.state.persons;
-        persons.splice(personIndex, 1);
+        persons.splice(personIndex, 1); //splice elimina un elemento del arreglo
         this.setState({persons: persons})
     }
 
@@ -52,7 +54,7 @@ class verclientes1e extends Component{
                     */}
                     {this.state.persons.map((cliente, index) => {
                         return <Nuevocliente5b 
-                        click={() => this.deletePersonHandler(index)}
+                        actNombre={() => this.deletePersonHandler(index)}
                         nombre={cliente.nombre} 
                         edad={cliente.edad} />
                     })}
