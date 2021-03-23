@@ -14,6 +14,7 @@ TODO:
 1. aumentar el tamaño del textbox de captura de datos
 2. actualizar updateTxtHandler usando spreadOperator
 3. link de referencia para el msgbox: https://levelup.gitconnected.com/simple-character-counter-in-react-js-f988c696c2fb
+4. propTypes: https://blog.logrocket.com/validating-react-component-props-with-prop-types-ef14b29963fc/
 
 
     actualizarNombresHandler = (event, id) => {
@@ -49,7 +50,6 @@ class TextMe extends Component{
     
     state = {
         myText: '',
-        myTxtLength: 0
     }
 
     //metodo para actualizar el contenido del textbox
@@ -76,13 +76,10 @@ class TextMe extends Component{
                     onChange={this.updateTxtHandler}
                     />
                     <h3>Using "state" to update this control simultaneously:</h3>
-                    <input type="text" width="80"
-                    value={this.state.myText}
-                    />               
-                    <h3>The length of the current text is:</h3>
-                    <input type="text" width="5"
-                    value={this.state.myText.length}
-                    />                                        
+                    <label>{this.state.myText}</label> 
+                    <p>
+                    <ValidateText myTxtLength={this.state.myText.length} />
+                    </p>
                 </div>
             </div>    
         )
