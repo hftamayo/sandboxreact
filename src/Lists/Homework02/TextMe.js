@@ -9,18 +9,12 @@ import './hwork02.css';
 3. Display each letter as a char
 4. if the user clicks on each one, it has to be deleted
 class based components
-*/
 
+TODO:
+1. aumentar el tamaño del textbox de captura de datos
+2. actualizar updateTxtHandler usando spreadOperator
+3. link de referencia para el msgbox: https://levelup.gitconnected.com/simple-character-counter-in-react-js-f988c696c2fb
 
-class TextMe extends Component{
-    
-    state = {
-        letters: [
-            {id: '01', nombre: 'Irving Jhonson', edad: 40},
-            {id: '02', nombre: 'Isaiah Thomas', edad: 38},            
-            {id: '03', nombre: 'Charles Barkley', edad: 26}
-        ],
-    }
 
     actualizarNombresHandler = (event, id) => {
         const letterIndex = this.state.letters.findIndex(eachLetter => {
@@ -50,47 +44,46 @@ class TextMe extends Component{
         this.setState({letters: letters})
     }
 
+*/
+class TextMe extends Component{
+    
+    state = {
+        myText: '',
+        myTxtLength: 0
+    }
 
-    render(){
-
-        let getMyText = null;
-        let displayTextLength = null;
+    //metodo para actualizar el contenido del textbox
+    //se usa spreadOperator para no operar de manera directa el objeto
+    updateTxtHandler = (event) => {
+        //ejemplo de codigo mala practica y que no es ES6
+        this.setState({
+            myText: event.target.value,
+        });
         /*
-        clientes = (
-            <div>
-                {this.state.persons.map((cliente, index) => {
-                    return <Nuevocliente5b 
-                    actNombre={() => this.deletePersonHandler(index)}
-                    nombre={cliente.nombre} 
-                    edad={cliente.edad}
-                    key={cliente.id} 
-                    cambiartxt={(event) => this.actualizarNombresHandler(event, cliente.id)}
-                    />
-                })}
-            </div>
+       const newText = [...this.state.myText]
+       newText.myText = event.target.value
+        */       
+    }
 
-        );
-        */
-
-        getMyText =(
-            <div>
-                <h3>Please type any text you want</h3>
-                <input type="text" onChange={displayTextLength}/>
-            </div>
-        );
-
-        displayTextLength =(
-            <i>
-                chibolita
-            </i>
-        );
-        
+    render(){   
         return(
             <div className="cajatipo1">
                 <h1>Homework02: Text2Chars</h1>
-                {getMyText}
-                <h3>Current Text Length:</h3>
-                {displayTextLength}
+                <div>
+                    <h3>Please type any text you want</h3>
+                    <input type="text" width="80" placeholder="Type any text greater than 3 characters"
+                    value={this.state.myText}
+                    onChange={this.updateTxtHandler}
+                    />
+                    <h3>Using "state" to update this control simultaneously:</h3>
+                    <input type="text" width="80"
+                    value={this.state.myText}
+                    />               
+                    <h3>The length of the current text is:</h3>
+                    <input type="text" width="5"
+                    value={this.state.myText.length}
+                    />                                        
+                </div>
             </div>    
         )
     }
