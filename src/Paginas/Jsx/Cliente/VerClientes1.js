@@ -2,7 +2,7 @@
 siempre debe heredar de la clase Component
 */
 
-import React from 'react';
+import React, {Component} from 'react';
 import NuevoCliente1 from './NuevoCliente1';
 
 

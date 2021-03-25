@@ -1,5 +1,6 @@
 import Menu from './Paginas/Menu';
 import Submenu from './Paginas/Submenu';
+import Cliente from './Paginas/Jsx/Cliente';
 import './App.css';
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
       <main>
       <div>
           <Submenu />
-        </div>
-        
+      </div>
+      <div>
+        <Cliente />
+      </div>
         <p>@hftamayo</p>
       </main>
     </div>
