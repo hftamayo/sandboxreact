@@ -77,12 +77,13 @@ class TextMe extends Component{
                     />
                     <h3>Using "state" to update this control simultaneously:</h3>
                     <label>{this.state.myText}</label> 
-                    <p>
-                        <ValidateText myTxtLength={this.state.myText.length} />
-                    </p>
-                    <p>
-                        {/* <CharText text2Char={this.state.myText.split("")} /> */}
-                    </p>
+                    {this.state.myText.length>0 ?
+                        <p>
+                            <ValidateText myTxtLength={this.state.myText.length} />
+                            <CharText text2Char={this.state.myText.split("")} />
+                        </p>
+                    : null
+                    }
                 </div>
             </div>    
         )

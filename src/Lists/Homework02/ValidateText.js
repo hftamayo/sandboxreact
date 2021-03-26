@@ -5,10 +5,8 @@ output tthe result to the user
 If the length is less than 5, the user get a Sweet Alert message
 */
 const validatetext = (props) => {
-    let showData = null;
-    if(!props.myTxtLength){
-        showData = (
-            <div>
+    return (
+        <div>
             <p>
                 The text entered length is {props.myTxtLength}<br />
                 {props.myTxtLength <=3 ? 
@@ -16,19 +14,6 @@ const validatetext = (props) => {
                 "The text length is aproved"}
             </p>
         </div>
-        );
-    }
-    else{
-        showData = (
-            <div>
-                <p>Waiting for text...</p>
-            </div>
-
-        );
-    }
-
-    return (
-        {showData}
     )
 }
 

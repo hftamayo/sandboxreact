@@ -1,12 +1,13 @@
 import React from 'react';
 /*
-validate text entered length
-output tthe result to the user
-If the length is less than 5, the user get a Sweet Alert message
+this component generate a prop children not allowed
+debug it in order to showData operate as an array
 */
 const validatetext = (props) => {
-    return (
-        <div>
+    let showData = null;
+    if(!props.myTxtLength){
+        showData = (
+            <div>
             <p>
                 The text entered length is {props.myTxtLength}<br />
                 {props.myTxtLength <=3 ? 
@@ -14,6 +15,19 @@ const validatetext = (props) => {
                 "The text length is aproved"}
             </p>
         </div>
+        );
+    }
+    else{
+        showData = (
+            <div>
+                <p>Waiting for text...</p>
+            </div>
+
+        );
+    }
+
+    return (
+        {showData}
     )
 }
 

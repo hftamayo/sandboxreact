@@ -6,14 +6,14 @@ receive an array and display each element
 
 */
 
-const chartext = (props) => {
-    <div>
-        <p className="letterSign">
-            {props.text2Char}
-
-        </p>
-    </div>
-
+const char2text = (props) => {
+    return (
+        <div>
+            <p className="letterSign">
+                {props.text2Char}
+            </p>
+        </div>
+    )
 }
 
-export default chartext;
+export default char2text;
