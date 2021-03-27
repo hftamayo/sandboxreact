@@ -9,6 +9,7 @@ function Menu(){
                 <li>
                 <BrowserRouter>
                     <Link to="/basicos">01 Basicos</Link>
+                    
                     {/*jsx, componentes, props, state, 
                     eventos y metodos, components naming,
                     hooks, stateless, stateful */}

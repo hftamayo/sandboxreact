@@ -13,9 +13,8 @@ function App() {
       <main>
       <div>
           <Submenu />
-        </div>
-        
-        <p>@hftamayo</p>
+        </div>       
+        <span class="icon text-middle fa-envelope"></span><p>@avelarjr77</p>
       </main>
     </div>
   );
