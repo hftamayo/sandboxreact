@@ -36,15 +36,6 @@ TODO:
         });
     }//fin de actualizarNombreHandler
 
-    //funcion para borrar elementos de la lista
-    deleteLetterHandler = (letterIndex) => {
-        //const persons = this.state.persons.slice();//hace una copia del objeto original
-        //antes de eliminar el objeto hacemos una copia con el spread operator
-        const letters = [...this.state.letters];
-        letters.splice(letterIndex, 1);  
-        this.setState({letters: letters})
-    }
-
 */
 class TextMe extends Component{
     
@@ -65,6 +56,15 @@ class TextMe extends Component{
         */       
     }
 
+    //funcion para borrar elementos de la lista
+    deleteCharacterHandler = (letterIndex) => {
+        //const persons = this.state.persons.slice();//hace una copia del objeto original
+        //antes de eliminar el objeto hacemos una copia con el spread operator
+        const letters2char = [...this.state.myText];
+        letters2char.splice(letterIndex, 1);  
+        this.setState({letters2char: letters2char})
+    }
+
     render(){   
         return(
             <div className="cajatipo1">
@@ -80,7 +80,10 @@ class TextMe extends Component{
                     {this.state.myText.length>0 ?
                         <p>
                             <ValidateText myTxtLength={this.state.myText.length} />
-                            <CharText text2Char={this.state.myText.split("")} />
+                            <CharText 
+                            text2Char={this.state.myText.split("")} 
+                            removeCharacter={() => this.deleteCharacterHandler(index)}
+                            />
                         </p>
                     : null
                     }

@@ -9,7 +9,10 @@ receive an array and display each element
 const char2text = (props) => {
     return (
         <div>
-            <p className="letterSign">
+            <p 
+            className="letterSign"
+            onClick={props.removeCharacter}
+            >
                 {props.text2Char}
             </p>
         </div>
