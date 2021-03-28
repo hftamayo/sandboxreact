@@ -60,9 +60,12 @@ class TextMe extends Component{
     deleteCharacterHandler = (letterIndex) => {
         //const persons = this.state.persons.slice();//hace una copia del objeto original
         //antes de eliminar el objeto hacemos una copia con el spread operator
+        /*
         const letters2char = [...this.state.myText];
         letters2char.splice(letterIndex, 1);  
         this.setState({letters2char: letters2char})
+        */
+       console.log("la letra que quiero eliminar es: "+letterIndex)
     }
 
     render(){   
@@ -82,7 +85,7 @@ class TextMe extends Component{
                             <ValidateText myTxtLength={this.state.myText.length} />
                             <CharText 
                             text2Char={this.state.myText.split("")} 
-                            removeCharacter={() => this.deleteCharacterHandler(index)}
+                            removeCharacter={() => this.deleteCharacterHandler()}
                             />
                         </p>
                     : null

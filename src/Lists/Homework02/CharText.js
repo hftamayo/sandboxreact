@@ -14,6 +14,8 @@ const char2text = (props) => {
             onClick={props.removeCharacter}
             >
                 {props.text2Char}
+                {/* verify how each array element is displayed */}
+                {console.log("letra: "+props.text2Char)}
             </p>
         </div>
     )
