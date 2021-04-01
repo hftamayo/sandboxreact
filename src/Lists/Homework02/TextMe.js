@@ -57,15 +57,23 @@ class TextMe extends Component{
     }
 
     //funcion para borrar elementos de la lista
-    deleteCharacterHandler = (letterIndex) => {
+    deleteCharacterHandler = () => {
         //const persons = this.state.persons.slice();//hace una copia del objeto original
-        //antes de eliminar el objeto hacemos una copia con el spread operator
+        
         /*
         const letters2char = [...this.state.myText];
         letters2char.splice(letterIndex, 1);  
         this.setState({letters2char: letters2char})
         */
-       console.log("la letra que quiero eliminar es: "+letterIndex)
+       //estamos seguros que el texto tiene al menos 1 caracter
+       //la variable principal es myText
+        //antes de eliminar elementos hacemos una copia con el spread operator
+        const letters = [...this.state.myText];
+        //iterar los elementos del arreglo
+        letters.map(letter => {
+            console.log(letter)
+        });
+
     }
 
     render(){   
