@@ -69,9 +69,9 @@ class TextMe extends Component{
        //la variable principal es myText
         //antes de eliminar elementos hacemos una copia con el spread operator
         const letters = [...this.state.myText];
-        //iterar los elementos del arreglo
-        letters.map(letter => {
-            console.log(letter)
+        //iterar todos los elementos del arreglo
+        letters.map((letter, index) => {
+            console.log("item: " + letter + ", index: "+index)
         });
 
     }
