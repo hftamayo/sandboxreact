@@ -81,6 +81,7 @@ class TextMe extends Component{
                             this.state.myText.split('').map((letter, index) => {
                                 return <CharText 
                                 text2Char = {letter}
+                                key = {index} //hice esto para quitar el warning de la consola
                                 removeCharacter={() => this.deleteCharacterHandler(index)}
                                 />
                             })                                
