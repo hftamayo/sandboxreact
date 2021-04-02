@@ -16,26 +16,6 @@ TODO:
 3. link de referencia para el msgbox: https://levelup.gitconnected.com/simple-character-counter-in-react-js-f988c696c2fb
 4. propTypes: https://blog.logrocket.com/validating-react-component-props-with-prop-types-ef14b29963fc/
 
-
-    actualizarNombresHandler = (event, id) => {
-        const letterIndex = this.state.letters.findIndex(eachLetter => {
-            return eachLetter.id === id;
-        });
-
-        const letter = {
-            ...this.state.letters[letterIndex]
-        };
-
-        letters.text = event.target.value;
-
-        const letters = [...this.state.letters];
-        letters[letterIndex] = letter;
-
-        this.setState({
-            letters: letters
-        });
-    }//fin de actualizarNombreHandler
-
 */
 class TextMe extends Component{
     
@@ -57,26 +37,30 @@ class TextMe extends Component{
     }
 
     //funcion para borrar elementos de la lista
-    deleteCharacterHandler = () => {
+    deleteCharacterHandler = (indexDelete) => {
+        //console.log("La letra que deseo borrar es: "+indexDelete)
         //const persons = this.state.persons.slice();//hace una copia del objeto original
         
-        /*
-        const letters2char = [...this.state.myText];
-        letters2char.splice(letterIndex, 1);  
-        this.setState({letters2char: letters2char})
-        */
-       //estamos seguros que el texto tiene al menos 1 caracter
-       //la variable principal es myText
-        //antes de eliminar elementos hacemos una copia con el spread operator
+        const charDelete = [...this.state.myText];
+        charDelete.splice(indexDelete, 1);  
+        const tmpCharDelete = charDelete.toString();
+        const updatedText = tmpCharDelete.split(',').join('\n')
+        this.setState({myText: updatedText})
+    }
+
+    //deprecated
+    //estamos seguros que el texto tiene al menos 1 caracter
+    //la variable principal es myText
+    //antes de eliminar elementos hacemos una copia con el spread operator
+    displayArrayContent = () => {
         const letters = [...this.state.myText];
         //iterar todos los elementos del arreglo
         letters.map((letter, index) => {
             console.log("item: " + letter + ", index: "+index)
         });
-
     }
 
-    render(){   
+    render(){  
         return(
             <div className="cajatipo1">
                 <h1>Homework02: Text2Chars</h1>
@@ -91,12 +75,16 @@ class TextMe extends Component{
                     {this.state.myText.length>0 ?
                         <p>
                             <ValidateText myTxtLength={this.state.myText.length} />
-                            <CharText 
-                            text2Char={this.state.myText.split("")} 
-                            removeCharacter={() => this.deleteCharacterHandler()}
-                            />
+                            {
+                            this.state.myText.split('').map((letter, index) => {
+                                return <CharText 
+                                text2Char = {letter}
+                                removeCharacter={() => this.deleteCharacterHandler(index)}
+                                />
+                            })                                
+                            }
                         </p>
-                    : null
+                        : null
                     }
                 </div>
             </div>    
