@@ -40,15 +40,16 @@ class TextMe extends Component{
     deleteCharacterHandler = (indexDelete) => {
         //console.log("La letra que deseo borrar es: "+indexDelete)
         //const persons = this.state.persons.slice();//hace una copia del objeto original
-        
         const charDelete = [...this.state.myText];
         charDelete.splice(indexDelete, 1);  
         const tmpCharDelete = charDelete.toString();
-        const updatedText = tmpCharDelete.split(',').join('\n')
+        console.log("el contenido de tmpCharDelete es: "+tmpCharDelete)
+        const updatedText = tmpCharDelete.split(',').join('')
+        console.log("el contenido de updatedText es: "+updatedText)
         this.setState({myText: updatedText})
     }
 
-    //deprecated
+    //deprecated: only during dev stage
     //estamos seguros que el texto tiene al menos 1 caracter
     //la variable principal es myText
     //antes de eliminar elementos hacemos una copia con el spread operator
