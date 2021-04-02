@@ -8,3 +8,10 @@
     font-weight: bold;
     font-size: 70px;
 }
+
+/* input type text width*/
+input[type="text"] {
+    width: 500px;
+}
+
+

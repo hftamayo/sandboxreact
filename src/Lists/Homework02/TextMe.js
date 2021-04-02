@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ValidateText from './ValidateText';
-import CharText from './CharText.js'
+import CharText from './CharText.js';
+import Swal from 'sweetalert2';
 import './hwork02.css';
 
 /* general purpose:
@@ -11,7 +12,7 @@ import './hwork02.css';
 class based components
 
 TODO:
-1. aumentar el tamaño del textbox de captura de datos
+1. update  the component to functional one
 2. actualizar updateTxtHandler usando spreadOperator
 3. link de referencia para el msgbox: https://levelup.gitconnected.com/simple-character-counter-in-react-js-f988c696c2fb
 4. propTypes: https://blog.logrocket.com/validating-react-component-props-with-prop-types-ef14b29963fc/
@@ -39,13 +40,13 @@ class TextMe extends Component{
     //funcion para borrar elementos de la lista
     deleteCharacterHandler = (indexDelete) => {
         //console.log("La letra que deseo borrar es: "+indexDelete)
-        //const persons = this.state.persons.slice();//hace una copia del objeto original
         const charDelete = [...this.state.myText];
         charDelete.splice(indexDelete, 1);  
+        Swal.fire({icon: 'success', text: 'The element was deleted'});
         const tmpCharDelete = charDelete.toString();
-        console.log("el contenido de tmpCharDelete es: "+tmpCharDelete)
+        //console.log("el contenido de tmpCharDelete es: "+tmpCharDelete)
         const updatedText = tmpCharDelete.split(',').join('')
-        console.log("el contenido de updatedText es: "+updatedText)
+        //console.log("el contenido de updatedText es: "+updatedText)
         this.setState({myText: updatedText})
     }
 
