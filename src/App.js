@@ -4,6 +4,7 @@ import Cliente from './Jsx/Cliente';
 import Homework01 from './Jsx/Homework01';
 import Lists from './Lists';
 import Homework02 from './Lists/Homework02';
+import Styling from './03Styling/Styling';
 import './App.css';
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           {/*<Homework01 /> */}
           {/*<Lists /> */}
           <Homework02 />
+        </div>
+        <div>
+          <Styling />
         </div>
         <p>@hftamayo</p>
       </main>
