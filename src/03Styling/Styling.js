@@ -4,11 +4,13 @@
 
 import React from 'react';
 import VerClientesa from './VerClientesa';
+import VerClientesb from './VerClientesb';
 
 function Styling(){
     return(
         <div>
-            <VerClientesa />
+            {/* <VerClientesa /> */}
+            <VerClientesb />
         </div>
 
     )
