@@ -5,14 +5,14 @@ import './styles.css';
 
 //adding Styled components to the button
 const StyledButton = styled.button`
-    background-color: green;
+    background-color: ${props => props.alt ? 'red': 'green'};
     color: white;
     font: inherit;
     border: 1px solid blue;
     padding: 8px;
     cursor: pointer;
     &:hover {
-        background-color: lightgreen;
+        background-color: ${props => props.alt ? 'salmon': 'lightgreen'};
         color: black;
     }
 `;
@@ -93,7 +93,7 @@ class verclientesb extends Component{
         return(
             <div className="cajatipo1">
                 <p className={classes.join(' ')}>Uso de listas dinamicas</p>
-                <StyledButton onClick={this.toggleNombresHandler}>Switch Name1
+                <StyledButton alt={this.state.showClientes} onClick={this.toggleNombresHandler}>Switch Name1
                 </StyledButton>
                 {/* el codigo se ve mas limpio al hace referencia a la variable clientes
                 */}
