@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const nuevoclienteb = (props) => {
     //``-> badTicks, este es un simbolo que se usa en ES6
     //StyleDiv siempre debe ir en PascalCase
     const StyleDiv = styled.div `
@@ -16,6 +15,7 @@ const nuevoclienteb = (props) => {
         width: 450px;
     }
 `;
+const nuevoclienteb = (props) => {
 
     return (
         <StyleDiv>

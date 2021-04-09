@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import Nuevoclienteb from './NuevoClienteb';
+import styled from 'styled-components';
 import './styles.css';
 
+//adding Styled components to the button
+const StyledButton = styled.button`
+    background-color: green;
+    color: white;
+    font: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+    cursor: pointer;
+    &:hover {
+        background-color: lightgreen;
+        color: black;
+    }
+`;
+//el & en el metodo hover de arriba sirve para vincularlo con el resto
+//de codigo css que pertenece a StyleButton
 
 class verclientesb extends Component{
     
@@ -77,7 +93,8 @@ class verclientesb extends Component{
         return(
             <div className="cajatipo1">
                 <p className={classes.join(' ')}>Uso de listas dinamicas</p>
-                <button className="boton" onClick={this.toggleNombresHandler}>Switch Name1</button>
+                <StyledButton onClick={this.toggleNombresHandler}>Switch Name1
+                </StyledButton>
                 {/* el codigo se ve mas limpio al hace referencia a la variable clientes
                 */}
                 {clientes}
