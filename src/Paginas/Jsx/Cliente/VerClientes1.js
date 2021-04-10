@@ -13,8 +13,8 @@ class verclientes1 extends Component{
         return(
             <div>
                 <p>Uso de class based components</p>
-                {/* <NuevoCliente1 />*/}
-                {/* <NuevoCliente2 /> */}
+                <NuevoCliente1 />
+                <NuevoCliente2 />
                 <NuevoCliente3 nombre='Luke SkyWalker' edad='25'/>
 
             </div>
