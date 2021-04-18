@@ -1,9 +1,9 @@
 import Menu from './Paginas/Menu';
 import Submenu from './Paginas/Submenu';
-import Cliente from './Jsx/Cliente';
-import Homework01 from './Jsx/Homework01';
-import Lists from './Lists';
-import Homework02 from './Lists/Homework02';
+import Cliente from './01Jsx/Cliente';
+import Homework01 from './01Jsx/Homework01';
+import Lists from './02Lists';
+import Homework02 from './02Lists/Homework02';
 import Styling from './03Styling/Styling';
 import './App.css';
 
