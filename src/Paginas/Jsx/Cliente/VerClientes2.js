@@ -6,17 +6,17 @@ import React, {Component} from 'react';
 
 class verclientes2 extends Component{
     state {
-        jugadores = [
-            {nombre='', edad=''},
-            {nombre='', edad=''},
-            {nombre='', edad=''},
-            {nombre='', edad=''},                                    
+        vendedoresPermanentes = [
+            {nombre='Lionel Messi', edad='34'},
+            {nombre='Luis Suarez', edad='35'},
+            {nombre='Marc Ter Stegen', edad='28'},
+            {nombre='Frenkie DeJong', edad='27'},                                    
         ]
     };
     render(){
         return(
             <div>
-                <p>Uso de class based components</p>
+                <p>Distribucion de Vendedores</p>
             </div>
         )
     }
