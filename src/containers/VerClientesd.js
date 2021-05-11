@@ -58,6 +58,7 @@ class VerClientesd extends Component{
         return(
             <div className="cajatipo1">
                 <Cockpit 
+                tituloApp = {this.props.appTitle}
                 showClientes={this.state.showClientes} 
                 clientes={this.state.persons} 
                 clicked = {this.toggleNombresHandler}

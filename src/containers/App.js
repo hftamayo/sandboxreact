@@ -12,7 +12,7 @@ function App() {
       <main>
         {/*area de submenu */}
         <div>
-          <VerClientesd />
+          <VerClientesd appTitle="Clients Manager" />
         </div>
         <p>@hftamayo</p>
       </main>

@@ -19,15 +19,16 @@ const StyledButton = styled.button`
 const cockpit = (props) => {
     //red y bold son nombre de clases en styles.css
     const classes = []; 
-    if(props.state.persons.length <= 2){
+    if(props.clientes.length <= 2){
         classes.push('red'); // classes = ['red']
     }
-    if(props.state.persons.length <= 1){
+    if(props.clientes.length <= 1){
         classes.push('bold'); //classes = ['red', 'bold']
     }
     
     return (
         <div>
+            <h1>{props.tituloApp}</h1>
             <p className={classes.join(' ')}>Uso de listas dinamicas</p>
             <StyledButton alt={props.showClientes} 
             onClick={props.clicked}>Switch Name1
