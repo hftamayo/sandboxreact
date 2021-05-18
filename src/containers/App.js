@@ -1,4 +1,5 @@
 import VerClientesd from './VerClientesd';
+import VerClientesdClass from './VerClientesdClass';
 import './App.css';
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
       <main>
         {/*area de submenu */}
         <div>
-          <VerClientesd appTitle="Clients Manager" />
+          {/* <VerClientesd appTitle="Clients Manager" /> */}
+          <VerClientesdClass
+            appTitle="Clients Manager Class Based"/>
         </div>
         <p>@hftamayo</p>
       </main>
