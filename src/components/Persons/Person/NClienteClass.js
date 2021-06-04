@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import Aux from '../../../hoc/Aux';
 
@@ -20,7 +20,8 @@ const StyleDiv = styled.div`
 class NClienteClass extends Component {
     render() {
         return (
-            <Aux>
+            <Fragment>
+            {/* sust por Fragment <Aux> */}
                 <StyleDiv>
                     <p onClick={this.props.actNombre}>
                         Mi nombre es {this.props.nombre},
@@ -32,7 +33,8 @@ class NClienteClass extends Component {
                         onChange={this.props.cambiartxt}
                         value={this.props.nombre} />
                 </StyleDiv>
-            </Aux>
+            {/* sust por fragment </Aux> */}
+            </Fragment>            
         );
 
     }
