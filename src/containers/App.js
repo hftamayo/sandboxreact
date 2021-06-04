@@ -13,9 +13,9 @@ function App() {
       <main>
         {/*area de submenu */}
         <div>
-          {/* <VerClientesd appTitle="Clients Manager" /> */}
-          <VerClientesdClass
-            appTitle="Clients Manager Class Based"/>
+          { <VerClientesd appTitle="Clients Manager" /> }
+          {/* <VerClientesdClass
+            appTitle="Clients Manager Class Based"/> */}
         </div>
         <p>@hftamayo</p>
       </main>

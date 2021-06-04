@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Aux from '../../../hoc/Aux';
 
 //``-> badTicks, este es un simbolo que se usa en ES6
 //StyleDiv siempre debe ir en PascalCase
@@ -19,17 +20,19 @@ const StyleDiv = styled.div`
 class NClienteClass extends Component {
     render() {
         return (
-            <StyleDiv>
-                <p onClick={this.props.actNombre}>
-                    Mi nombre es {this.props.nombre},
+            <Aux>
+                <StyleDiv>
+                    <p onClick={this.props.actNombre}>
+                        Mi nombre es {this.props.nombre},
                     soy un cliente
                     y tengo {this.props.edad} años<br />
-                    {this.props.children}</p>
-                <input
-                    type="text"
-                    onChange={this.props.cambiartxt}
-                    value={this.props.nombre} />
-            </StyleDiv>
+                        {this.props.children}</p>
+                    <input
+                        type="text"
+                        onChange={this.props.cambiartxt}
+                        value={this.props.nombre} />
+                </StyleDiv>
+            </Aux>
         );
 
     }

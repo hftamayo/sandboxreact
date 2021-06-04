@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import NClienteClass from './Person/NClienteClass';
 
-
 class PersonsClass extends Component{
     render() {
         return this.props.persons.map((cliente, index) => {
